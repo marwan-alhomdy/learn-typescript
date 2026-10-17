@@ -18,13 +18,13 @@
 
 ## 02 — Functions & Control Flow
 
-- [ ] Function parameters و return types
-- [ ] Optional و Default parameters
-- [ ] Arrow functions و Callbacks
-- [ ] Function overloads
-- [ ] Type narrowing
-- [ ] `typeof` و `instanceof` و `in`
-- [ ] Type predicates و Assertion functions
+- [x] Function parameters و return types
+- [x] Optional و Default parameters
+- [x] Arrow functions و Callbacks
+- [x] Function overloads
+- [x] Type narrowing
+- [x] `typeof` و `instanceof` و `in`
+- [x] Type predicates و Assertion functions
 
 ---
 
