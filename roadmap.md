@@ -6,13 +6,13 @@
 
 ## 01 — Types & Fundamentals
 
-- [ ] `string`, `number`, `boolean`
-- [ ] `any`, `unknown`, `never`, `void`
-- [ ] Type inference و type annotations
-- [ ] Arrays و Tuples
-- [ ] Objects و Optional Properties
-- [ ] Enums و Literal Types
-- [ ] Union Types و Intersection Types
+- [x] `string`, `number`, `boolean`
+- [x] `any`, `unknown`, `never`, `void`
+- [x] Type inference و type annotations
+- [x] Arrays و Tuples
+- [x] Objects و Optional Properties
+- [x] Enums و Literal Types
+- [x] Union Types و Intersection Types
 
 ---
 
