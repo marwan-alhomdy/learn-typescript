@@ -41,14 +41,14 @@
 
 ## 04 — Generics & Advanced Types
 
-- [ ] Generic functions و Generic interfaces
-- [ ] Generic constraints: `extends`
-- [ ] `keyof` و `typeof`
-- [ ] Indexed access types: `T[K]`
-- [ ] Conditional types و `infer`
-- [ ] Mapped types
-- [ ] Utility types: `Partial`, `Pick`, `Omit`, `Record`, `Required`, `Readonly`, `ReturnType`, `Parameters`
-- [ ] Template literal types
+- [x] Generic functions و Generic interfaces
+- [x] Generic constraints: `extends`
+- [x] `keyof` و `typeof`
+- [x] Indexed access types: `T[K]`
+- [x] Conditional types و `infer`
+- [x] Mapped types
+- [x] Utility types: `Partial`, `Pick`, `Omit`, `Record`, `Required`, `Readonly`, `ReturnType`, `Parameters`
+- [x] Template literal types
 
 ---
 
