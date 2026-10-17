@@ -16,6 +16,7 @@ function processNumbers(
 const doubled = processNumbers([1, 2, 3], (n) => n * 2);
 const squared = processNumbers([1, 2, 3], (n) => n * n);
 
+//[4, 6, 8], [1, 4, 9]
 console.log(doubled, squared);
 
 // الفرق باختصار:
