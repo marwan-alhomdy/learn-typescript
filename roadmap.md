@@ -30,12 +30,12 @@
 
 ## 03 — Object Modeling
 
-- [ ] `type` و `interface`
-- [ ] Extending interfaces و Intersection
-- [ ] `readonly` و optional properties
-- [ ] Index signatures
-- [ ] Discriminated unions
-- [ ] Structural typing و excess property checks
+- [x] `type` و `interface`
+- [x] Extending interfaces و Intersection
+- [x] `readonly` و optional properties
+- [x] Index signatures
+- [x] Discriminated unions
+- [x] Structural typing و excess property checks
 
 ---
 
