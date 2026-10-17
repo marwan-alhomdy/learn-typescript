@@ -54,14 +54,14 @@
 
 ## 05 — Classes & OOP
 
-- [ ] Classes و Constructors
-- [ ] `public`, `private`, `protected`
-- [ ] `readonly` و `static`
-- [ ] Inheritance و `implements`
-- [ ] Abstract classes
-- [ ] Composition vs inheritance
-- [ ] Getters و Setters
-- [ ] Parameter properties
+- [x] Classes و Constructors
+- [x] `public`, `private`, `protected`
+- [x] `readonly` و `static`
+- [x] Inheritance و `implements`
+- [x] Abstract classes
+- [x] Composition vs inheritance
+- [x] Getters و Setters
+- [x] Parameter properties
 
 ---
 
