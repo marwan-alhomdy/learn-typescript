@@ -91,11 +91,11 @@
 
 ## 08 — Testing & Design
 
-- [ ] Unit testing
-- [ ] Assertions و edge cases
-- [ ] Dependency injection
-- [ ] Separation of concerns
-- [ ] SOLID basics
-- [ ] Repository و Service patterns
-- [ ] Data validation
-- [ ] Error classes و Result types
+- [x] Unit testing
+- [x] Assertions و edge cases
+- [x] Dependency injection
+- [x] Separation of concerns
+- [x] SOLID basics
+- [x] Repository و Service patterns
+- [x] Data validation
+- [x] Error classes و Result types
