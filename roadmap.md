@@ -79,13 +79,13 @@
 
 ## 07 — Async & Runtime
 
-- [ ] `Promise` و `async`/`await`
-- [ ] `Promise.all` و `Promise.allSettled`
-- [ ] `try`/`catch` و `unknown` errors
-- [ ] `JSON.parse` و runtime validation
-- [ ] File System و Node.js types
-- [ ] Environment variables
-- [ ] `null` و `undefined` و optional chaining
+- [x] `Promise` و `async`/`await`
+- [x] `Promise.all` و `Promise.allSettled`
+- [x] `try`/`catch` و `unknown` errors
+- [x] `JSON.parse` و runtime validation
+- [x] File System و Node.js types
+- [x] Environment variables
+- [x] `null` و `undefined` و optional chaining
 
 ---
 
