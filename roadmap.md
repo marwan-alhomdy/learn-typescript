@@ -2,6 +2,8 @@
 
 خريطة طريق لتعلّم TypeScript — من الأساسيات إلى التصميم والاختبار.
 
+كل مرحلة لها ملف شرح مفصّل: `NOTES.md` داخل مجلدها (مثال: [`01_types_fundamentals/NOTES.md`](./01_types_fundamentals/NOTES.md)).
+
 ---
 
 ## 01 — Types & Fundamentals

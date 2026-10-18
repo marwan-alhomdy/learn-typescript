@@ -40,18 +40,18 @@ npx tsc --noEmit
 
 نظرة سريعة:
 
-| المجلد | الموضوع |
-|--------|---------|
-| `01_types_fundamentals` | الأنواع الأساسية، الاستدلال، المصفوفات، الاتحادات |
-| `02_functions_control_flow` | الدوال، التضييق، الـ overloads |
-| `03_object_modeling` | `type` / `interface`، unions مميّزة |
-| `04_generics_advanced_types` | Generics، Mapped/Conditional، Utility types |
-| `05_classes_oop` | الكلاسات، الوراثة، التركيبة |
-| `06_modules_tooling` | الوحدات، `tsconfig`، ESM/CJS |
-| `07_async_runtime` | Promises، Node.js، المتغيرات البيئية |
-| `08_testing_design` | الاختبار، SOLID، Repository/Service |
+| المجلد | الموضوع | الشرح المفصّل |
+|--------|---------|----------------|
+| `01_types_fundamentals` | الأنواع الأساسية، الاستدلال، المصفوفات، الاتحادات | [`NOTES.md`](./01_types_fundamentals/NOTES.md) |
+| `02_functions_control_flow` | الدوال، التضييق، الـ overloads | [`NOTES.md`](./02_functions_control_flow/NOTES.md) |
+| `03_object_modeling` | `type` / `interface`، unions مميّزة | [`NOTES.md`](./03_object_modeling/NOTES.md) |
+| `04_generics_advanced_types` | Generics، Mapped/Conditional، Utility types | [`NOTES.md`](./04_generics_advanced_types/NOTES.md) |
+| `05_classes_oop` | الكلاسات، الوراثة، التركيبة | [`NOTES.md`](./05_classes_oop/NOTES.md) |
+| `06_modules_tooling` | الوحدات، `tsconfig`، ESM/CJS | [`NOTES.md`](./06_modules_tooling/NOTES.md) |
+| `07_async_runtime` | Promises، Node.js، المتغيرات البيئية | [`NOTES.md`](./07_async_runtime/NOTES.md) |
+| `08_testing_design` | الاختبار، SOLID، Repository/Service | [`NOTES.md`](./08_testing_design/NOTES.md) |
 
-للتقدّم كقائمة تحقق انظر [`roadmap.md`](./roadmap.md).
+كل مجلد فيه **`NOTES.md`** يشرح كل درس بالتفصيل (مفاهيم، أمثلة، أخطاء شائعة، وأمر التشغيل). للتقدّم كقائمة تحقق انظر [`roadmap.md`](./roadmap.md).
 
 ---
 

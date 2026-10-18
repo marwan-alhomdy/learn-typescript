@@ -40,18 +40,18 @@ npx tsc --noEmit
 
 Quick overview:
 
-| Folder | Topic |
-|--------|-------|
-| `01_types_fundamentals` | Core types, inference, arrays, unions |
-| `02_functions_control_flow` | Functions, narrowing, overloads |
-| `03_object_modeling` | `type` / `interface`, discriminated unions |
-| `04_generics_advanced_types` | Generics, mapped/conditional, utility types |
-| `05_classes_oop` | Classes, inheritance, composition |
-| `06_modules_tooling` | Modules, `tsconfig`, ESM/CJS |
-| `07_async_runtime` | Promises, Node.js, environment variables |
-| `08_testing_design` | Testing, SOLID, Repository/Service |
+| Folder | Topic | Detailed notes |
+|--------|-------|----------------|
+| `01_types_fundamentals` | Core types, inference, arrays, unions | [`NOTES.md`](./01_types_fundamentals/NOTES.md) |
+| `02_functions_control_flow` | Functions, narrowing, overloads | [`NOTES.md`](./02_functions_control_flow/NOTES.md) |
+| `03_object_modeling` | `type` / `interface`, discriminated unions | [`NOTES.md`](./03_object_modeling/NOTES.md) |
+| `04_generics_advanced_types` | Generics, mapped/conditional, utility types | [`NOTES.md`](./04_generics_advanced_types/NOTES.md) |
+| `05_classes_oop` | Classes, inheritance, composition | [`NOTES.md`](./05_classes_oop/NOTES.md) |
+| `06_modules_tooling` | Modules, `tsconfig`, ESM/CJS | [`NOTES.md`](./06_modules_tooling/NOTES.md) |
+| `07_async_runtime` | Promises, Node.js, environment variables | [`NOTES.md`](./07_async_runtime/NOTES.md) |
+| `08_testing_design` | Testing, SOLID, Repository/Service | [`NOTES.md`](./08_testing_design/NOTES.md) |
 
-For a checklist-style progress track, see [`roadmap.md`](./roadmap.md).
+Each folder has a **`NOTES.md`** (Arabic) that explains every lesson in detail. For a checklist-style progress track, see [`roadmap.md`](./roadmap.md).
 
 ---
 
