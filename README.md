@@ -1,32 +1,34 @@
 # learn-typescript
 
-مستودع تطبيقي لتعلّم TypeScript — من الأساسيات إلى التصميم والاختبار.
+A hands-on TypeScript learning repo — from fundamentals to testing and design.
 
-كل مجلد يمثل مرحلة، وكل ملف درس مستقل يمكنك تشغيله وقراءته على حدة.
+Each folder is a stage. Each file is a standalone lesson you can read and run on its own.
+
+> Arabic version: [`README_RA.md`](./README_RA.md)
 
 ---
 
-## المتطلبات
+## Requirements
 
-- [Node.js](https://nodejs.org/) (الإصدار 18 أو أحدث مفضّل)
-- TypeScript و أداة تشغيل مثل `tsx` (اختياري لكن مريح للتشغيل السريع)
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- TypeScript and a runner like `tsx` (optional, but convenient)
 
 ```bash
 npm install
-npm install -g typescript tsx   # اختياري عالميًا
+npm install -g typescript tsx   # optional global install
 ```
 
 ---
 
-## التشغيل
+## Running lessons
 
-تشغيل أي درس مباشرة:
+Run any lesson directly:
 
 ```bash
 npx tsx 01_types_fundamentals/01_primitives.ts
 ```
 
-أو التحقق من الأنواع على المشروع كاملًا:
+Or type-check the whole project:
 
 ```bash
 npx tsc --noEmit
@@ -34,212 +36,212 @@ npx tsc --noEmit
 
 ---
 
-## هيكل المشروع
+## Project structure
 
-نظرة سريعة:
+Quick overview:
 
-| المجلد | الموضوع |
-|--------|---------|
-| `01_types_fundamentals` | الأنواع الأساسية، الاستدلال، المصفوفات، الاتحادات |
-| `02_functions_control_flow` | الدوال، التضييق، الـ overloads |
-| `03_object_modeling` | `type` / `interface`، unions مميّزة |
-| `04_generics_advanced_types` | Generics، Mapped/Conditional، Utility types |
-| `05_classes_oop` | الكلاسات، الوراثة، التركيبة |
-| `06_modules_tooling` | الوحدات، `tsconfig`، ESM/CJS |
-| `07_async_runtime` | Promises، Node.js، المتغيرات البيئية |
-| `08_testing_design` | الاختبار، SOLID، Repository/Service |
+| Folder | Topic |
+|--------|-------|
+| `01_types_fundamentals` | Core types, inference, arrays, unions |
+| `02_functions_control_flow` | Functions, narrowing, overloads |
+| `03_object_modeling` | `type` / `interface`, discriminated unions |
+| `04_generics_advanced_types` | Generics, mapped/conditional, utility types |
+| `05_classes_oop` | Classes, inheritance, composition |
+| `06_modules_tooling` | Modules, `tsconfig`, ESM/CJS |
+| `07_async_runtime` | Promises, Node.js, environment variables |
+| `08_testing_design` | Testing, SOLID, Repository/Service |
 
-للتقدّم كقائمة تحقق انظر [`roadmap.md`](./roadmap.md).
-
----
-
-### `01_types_fundamentals` — الأنواع والأساسيات
-
-أساس TypeScript: أنواع القيم، الاستدلال، والتركيبات الأولى للأنواع.
-
-| الملف | الشرح |
-|-------|--------|
-| `01_primitives.ts` | الأنواع البدائية: `string`, `number`, `boolean` والمتغيرات القابلة للتغيير |
-| `02_special_types.ts` | أنواع خاصة: `any`, `unknown`, `never`, `void` ومتى تستخدم كل واحد |
-| `03_inference_annotations.ts` | الفرق بين استنتاج النوع تلقائيًا وكتابة الـ annotation يدويًا |
-| `04_arrays_tuples.ts` | المصفوفات (`T[]`) والـ tuples بطول وأنواع ثابتة لكل موضع |
-| `05_objects_optional.ts` | كائنات بخصائص مطلوبة وخصائص اختيارية بـ `?` |
-| `06_enums_literals.ts` | الـ enums والقيم الحرفية (literal types) مثل `"admin"` |
-| `07_union_intersection.ts` | اتحاد الأنواع `|` وتقاطع الأنواع `&` |
+For a checklist-style progress track, see [`roadmap.md`](./roadmap.md).
 
 ---
 
-### `02_functions_control_flow` — الدوال وتدفّق التحكم
+### `01_types_fundamentals` — Types & fundamentals
 
-كتابة دوال آمنة وتضييق الأنواع داخل الشروط.
+TypeScript basics: value types, inference, and early type composition.
 
-| الملف | الشرح |
-|-------|--------|
-| `01_function_params_return.ts` | معاملات الدالة ونوع القيمة المُرجَعة (صريح أو مستنتج) |
-| `02_optional_default_params.ts` | معاملات اختيارية `?` وقيم افتراضية |
-| `03_arrow_callbacks.ts` | دوال السهم (arrow) وتمرير الدوال كـ callbacks |
-| `04_function_overloads.ts` | نفس الدالة بعدة توقيعات (overloads) حسب نوع المدخل |
-| `05_type_narrowing.ts` | تضييق union إلى نوع أدق داخل `if` / `else` |
-| `06_typeof_instanceof_in.ts` | أدوات التضييق: `typeof`, `instanceof`, `in` |
-| `07_type_predicates_assertions.ts` | دوال `is` (type predicates) و assertion functions |
-
----
-
-### `03_object_modeling` — نمذجة الكائنات
-
-كيف تصمّم أشكال البيانات بـ `type` و `interface`.
-
-| الملف | الشرح |
-|-------|--------|
-| `01_type_interface.ts` | الفرق والاستخدام الأساسي لـ `type` و `interface` |
-| `02_extending_intersection.ts` | وراثة الـ interface بـ `extends` والتقاطع `&` |
-| `03_readonly_optional.ts` | خصائص `readonly` والخصائص الاختيارية |
-| `04_index_signatures.ts` | مفاتيح ديناميكية: `[key: string]: ...` |
-| `05_discriminated_unions.ts` | unions بمميّز (`status`) لتفريق الحالات بأمان |
-| `06_structural_typing.ts` | الكتابة البنيوية: المهم شكل الكائن لا اسم النوع |
+| File | Description |
+|------|-------------|
+| `01_primitives.ts` | Primitive types: `string`, `number`, `boolean`, and mutable variables |
+| `02_special_types.ts` | Special types: `any`, `unknown`, `never`, `void`, and when to use each |
+| `03_inference_annotations.ts` | Type inference vs writing annotations by hand |
+| `04_arrays_tuples.ts` | Arrays (`T[]`) and tuples with fixed length/types per position |
+| `05_objects_optional.ts` | Objects with required properties and optional ones via `?` |
+| `06_enums_literals.ts` | Enums and literal types such as `"admin"` |
+| `07_union_intersection.ts` | Union types `|` and intersection types `&` |
 
 ---
 
-### `04_generics_advanced_types` — Generics والأنواع المتقدمة
+### `02_functions_control_flow` — Functions & control flow
 
-أنواع مرنة قابلة لإعادة الاستخدام وأدوات تحويل الأنواع.
+Writing safe functions and narrowing types inside conditionals.
 
-| الملف | الشرح |
-|-------|--------|
-| `01_generic_functions_interfaces.ts` | دوال وواجهات عامة بـ `<T>` |
-| `02_generic_constraints.ts` | تقييد الـ generic بـ `extends` |
-| `03_keyof_typeof.ts` | استخراج مفاتيح النوع بـ `keyof` ونوع القيمة بـ `typeof` |
-| `04_indexed_access.ts` | الوصول لنوع خاصية: `T[K]` |
-| `05_conditional_infer.ts` | أنواع شرطية `T extends U ? X : Y` و `infer` |
-| `06_mapped_types.ts` | تحويل كل خصائص نوع إلى شكل جديد |
-| `07_utility_types.ts` | أنواع جاهزة: `Partial`, `Pick`, `Omit`, `Record`, ... |
-| `08_template_literal_types.ts` | بناء أنواع نصية من أجزاء بـ template literals |
-
----
-
-### `05_classes_oop` — الكلاسات والبرمجة الكائنية
-
-OOP في TypeScript: تغليف، وراثة، وتركيبة.
-
-| الملف | الشرح |
-|-------|--------|
-| `01_classes_constructors.ts` | تعريف الكلاس والـ constructor |
-| `02_access_modifiers.ts` | مستويات الوصول: `public`, `private`, `protected` |
-| `03_readonly_static.ts` | خصائص `readonly` وأعضاء `static` على مستوى الكلاس |
-| `04_inheritance_implements.ts` | الوراثة بـ `extends` وتنفيذ العقود بـ `implements` |
-| `05_abstract_classes.ts` | كلاسات مجرّدة كقوالب لا تُنشأ منها كائنات مباشرة |
-| `06_composition_vs_inheritance.ts` | متى تستخدم التركيبة (has-a) بدل الوراثة (is-a) |
-| `07_getters_setters.ts` | قراءة/كتابة خصائص مع منطق تحكّم إضافي |
-| `08_parameter_properties.ts` | اختصار تعريف الخاصية من معاملات الـ constructor |
+| File | Description |
+|------|-------------|
+| `01_function_params_return.ts` | Function parameters and return types (explicit or inferred) |
+| `02_optional_default_params.ts` | Optional parameters `?` and default values |
+| `03_arrow_callbacks.ts` | Arrow functions and passing functions as callbacks |
+| `04_function_overloads.ts` | Same function with multiple signatures (overloads) by input type |
+| `05_type_narrowing.ts` | Narrowing a union to a more precise type inside `if` / `else` |
+| `06_typeof_instanceof_in.ts` | Narrowing tools: `typeof`, `instanceof`, `in` |
+| `07_type_predicates_assertions.ts` | `is` functions (type predicates) and assertion functions |
 
 ---
 
-### `06_modules_tooling` — الوحدات والأدوات
+### `03_object_modeling` — Object modeling
 
-تنظيم الملفات، الإعدادات، وتشغيل TypeScript في Node.
+How to shape data with `type` and `interface`.
+
+| File | Description |
+|------|-------------|
+| `01_type_interface.ts` | Basic usage and differences between `type` and `interface` |
+| `02_extending_intersection.ts` | Extending interfaces with `extends` and intersections with `&` |
+| `03_readonly_optional.ts` | `readonly` properties and optional properties |
+| `04_index_signatures.ts` | Dynamic keys: `[key: string]: ...` |
+| `05_discriminated_unions.ts` | Unions with a discriminant (`status`) for safe case handling |
+| `06_structural_typing.ts` | Structural typing: shape matters more than the type name |
+
+---
+
+### `04_generics_advanced_types` — Generics & advanced types
+
+Reusable flexible types and type-transformation tools.
+
+| File | Description |
+|------|-------------|
+| `01_generic_functions_interfaces.ts` | Generic functions and interfaces with `<T>` |
+| `02_generic_constraints.ts` | Constraining generics with `extends` |
+| `03_keyof_typeof.ts` | Extracting keys with `keyof` and value types with `typeof` |
+| `04_indexed_access.ts` | Property type access: `T[K]` |
+| `05_conditional_infer.ts` | Conditional types `T extends U ? X : Y` and `infer` |
+| `06_mapped_types.ts` | Transforming every property of a type into a new shape |
+| `07_utility_types.ts` | Built-in helpers: `Partial`, `Pick`, `Omit`, `Record`, ... |
+| `08_template_literal_types.ts` | Building string types from parts with template literals |
+
+---
+
+### `05_classes_oop` — Classes & OOP
+
+OOP in TypeScript: encapsulation, inheritance, and composition.
+
+| File | Description |
+|------|-------------|
+| `01_classes_constructors.ts` | Defining a class and its constructor |
+| `02_access_modifiers.ts` | Access levels: `public`, `private`, `protected` |
+| `03_readonly_static.ts` | `readonly` fields and `static` class-level members |
+| `04_inheritance_implements.ts` | Inheritance with `extends` and contracts with `implements` |
+| `05_abstract_classes.ts` | Abstract classes as templates that cannot be instantiated directly |
+| `06_composition_vs_inheritance.ts` | When to prefer composition (has-a) over inheritance (is-a) |
+| `07_getters_setters.ts` | Reading/writing properties with extra control logic |
+| `08_parameter_properties.ts` | Shorthand for declaring fields from constructor parameters |
+
+---
+
+### `06_modules_tooling` — Modules & tooling
+
+File organization, configuration, and running TypeScript on Node.
 
 #### `01_named_default_exports/`
-| الملف | الشرح |
-|-------|--------|
-| `exports.ts` | تصدير named و default وأنواع |
-| `main.ts` | استيرادها معًا واستخدامها |
+| File | Description |
+|------|-------------|
+| `exports.ts` | Named exports, default export, and types |
+| `main.ts` | Importing and using them together |
 
 #### `02_import_export_type/`
-| الملف | الشرح |
-|-------|--------|
-| `models.ts` | `export type` لأنواع تُحذف وقت التشغيل |
-| `main.ts` | `import type` مقابل استيراد القيم العادية |
+| File | Description |
+|------|-------------|
+| `models.ts` | `export type` for types erased at runtime |
+| `main.ts` | `import type` vs importing regular values |
 
 #### `03_module_organization/`
-| الملف | الشرح |
-|-------|--------|
-| `types.ts` | أنواع مشتركة في ملف واحد |
-| `users.ts` / `products.ts` | وحدات منفصلة لكل مجال |
-| `index.ts` | barrel يعيد التصدير من مكان واحد |
-| `main.ts` | نقطة دخول تستورد من الـ barrel |
+| File | Description |
+|------|-------------|
+| `types.ts` | Shared types in one file |
+| `users.ts` / `products.ts` | Separate modules per domain |
+| `index.ts` | Barrel file that re-exports from one place |
+| `main.ts` | Entry point that imports from the barrel |
 
 #### `04_tsconfig_strict/`
-| الملف | الشرح |
-|-------|--------|
-| `strict_options.ts` | شرح أهم خيارات `strict` في التعليقات |
-| `main.ts` | أمثلة كود صحيحة تحت الوضع الصارم |
+| File | Description |
+|------|-------------|
+| `strict_options.ts` | Comments explaining key `strict` options |
+| `main.ts` | Valid code examples under strict mode |
 
 #### `05_tsc_tsx_nodejs/`
-| الملف | الشرح |
-|-------|--------|
-| `main.ts` | كيف تشغّل TypeScript بـ `tsc` / `tsx` / Node |
-| `app.ts` | دالة بسيطة للتجربة مع أدوات التشغيل |
+| File | Description |
+|------|-------------|
+| `main.ts` | How to run TypeScript with `tsc` / `tsx` / Node |
+| `app.ts` | Small helper function for trying the tooling |
 
 #### `06_esm_commonjs/`
-| الملف | الشرح |
-|-------|--------|
-| `main.ts` | مقارنة ESM و CommonJS |
-| `esm_math.ts` / `esm_main.ts` | مثال عملي على `import`/`export` (ESM) |
+| File | Description |
+|------|-------------|
+| `main.ts` | ESM vs CommonJS comparison |
+| `esm_math.ts` / `esm_main.ts` | Practical `import`/`export` (ESM) example |
 
 #### `07_ambient_declarations/`
-| الملف | الشرح |
-|-------|--------|
-| `main.ts` | مقدمة عن ملفات التعريف `.d.ts` و `declare` |
-| `global.d.ts` | أنواع عامة على `globalThis` |
-| `legacy-lib.d.ts` | وصف مكتبة JS قديمة بدون أنواع جاهزة |
-| `runtime.ts` | القيم الفعلية وقت التشغيل التي تطابق التعريفات |
+| File | Description |
+|------|-------------|
+| `main.ts` | Intro to `.d.ts` declaration files and `declare` |
+| `global.d.ts` | Ambient types on `globalThis` |
+| `legacy-lib.d.ts` | Typing an old JS library with no shipped types |
+| `runtime.ts` | Runtime values that match the declarations |
 
 ---
 
-### `07_async_runtime` — غير المتزامن وبيئة التشغيل
+### `07_async_runtime` — Async & runtime
 
-Promises، التعامل مع الأخطاء، والتعامل مع Node وبيانات وقت التشغيل.
+Promises, error handling, and working with Node and runtime data.
 
-| الملف | الشرح |
-|-------|--------|
-| `01_promise_async_await.ts` | أساسيات `Promise` و `async`/`await` |
-| `02_promise_all_settled.ts` | تشغيل عدة وعود معًا: `Promise.all` و `allSettled` |
-| `03_try_catch_unknown.ts` | التقاط الأخطاء ومعاملتها كـ `unknown` بأمان |
-| `04_json_runtime_validation.ts` | `JSON.parse` والتحقق من الشكل وقت التشغيل |
-| `05_filesystem_nodejs.ts` | قراءة/كتابة ملفات بـ `node:fs/promises` |
-| `06_environment_variables.ts` | قراءة `process.env` وملف `.env` عبر `dotenv` |
-| `07_null_undefined_optional_chaining.ts` | `null` / `undefined` و `?.` و `??` |
-
----
-
-### `08_testing_design` — الاختبار والتصميم
-
-مبادئ كتابة كود قابل للاختبار وبنية أوضح للمشاريع.
-
-| الملف | الشرح |
-|-------|--------|
-| `01_unit_testing.ts` | فكرة اختبار الوحدة: دوال صغيرة + تحقق من النتيجة |
-| `02_assertions_edge_cases.ts` | التأكيدات (assertions) وحالات الحدّ (edge cases) |
-| `03_dependency_injection.ts` | تمرير الاعتماديات من الخارج لتسهيل الاختبار |
-| `04_separation_of_concerns.ts` | فصل المسؤوليات بدل خلط كل شيء في دالة واحدة |
-| `05_solid_basics.ts` | مبادئ SOLID باختصار مع أمثلة كلاسات |
-| `06_repository_service.ts` | نمط Repository (بيانات) و Service (منطق العمل) |
-| `07_data_validation.ts` | التحقق من صحة المدخلات قبل استخدامها |
-| `08_error_classes_result.ts` | كلاسات أخطاء مخصّصة ونمط Result للنجاح/الفشل |
+| File | Description |
+|------|-------------|
+| `01_promise_async_await.ts` | Basics of `Promise` and `async`/`await` |
+| `02_promise_all_settled.ts` | Running many promises together: `Promise.all` and `allSettled` |
+| `03_try_catch_unknown.ts` | Catching errors and treating them as `unknown` safely |
+| `04_json_runtime_validation.ts` | `JSON.parse` and validating shape at runtime |
+| `05_filesystem_nodejs.ts` | Reading/writing files with `node:fs/promises` |
+| `06_environment_variables.ts` | Reading `process.env` and a `.env` file via `dotenv` |
+| `07_null_undefined_optional_chaining.ts` | `null` / `undefined`, optional chaining `?.`, and `??` |
 
 ---
 
-## إعداد TypeScript
+### `08_testing_design` — Testing & design
 
-المشروع يستخدم `strict` مع خيارات إضافية مثل:
+Principles for testable code and clearer project structure.
+
+| File | Description |
+|------|-------------|
+| `01_unit_testing.ts` | Unit testing idea: small functions + checking the result |
+| `02_assertions_edge_cases.ts` | Assertions and edge cases |
+| `03_dependency_injection.ts` | Passing dependencies from outside to make testing easier |
+| `04_separation_of_concerns.ts` | Separating responsibilities instead of mixing everything |
+| `05_solid_basics.ts` | SOLID principles with short class examples |
+| `06_repository_service.ts` | Repository (data) and Service (business logic) patterns |
+| `07_data_validation.ts` | Validating inputs before using them |
+| `08_error_classes_result.ts` | Custom error classes and a Result success/failure pattern |
+
+---
+
+## TypeScript setup
+
+This project uses `strict` plus extra options such as:
 
 - `noUncheckedIndexedAccess`
 - `exactOptionalPropertyTypes`
 - `verbatimModuleSyntax`
 - `module`: `nodenext`
 
-راجع [`tsconfig.json`](./tsconfig.json).
+See [`tsconfig.json`](./tsconfig.json).
 
 ---
 
-## ملاحظات
+## Notes
 
-- المجلدات مرقّمة لترتيب التعلّم؛ ابدأ من `01` ثم تصاعديًا.
-- بعض دروس `07_async_runtime` قد تحتاج ملف `.env` محليًا (لا يُرفع إلى Git).
-- مخرجات الترجمة (`*.js`, `*.d.ts`, `dist/`) مستثناة عبر `.gitignore`.
+- Folders are numbered for learning order; start at `01` and go up.
+- Some `07_async_runtime` lessons may need a local `.env` file (not committed to Git).
+- Build outputs (`*.js`, `*.d.ts`, `dist/`) are ignored via `.gitignore`.
 
 ---
 
-## الترخيص
+## License
 
-مشروع تعليمي شخصي — استخدمه بحرّية للتعلّم والممارسة.
+Personal learning project — free to use for study and practice.
