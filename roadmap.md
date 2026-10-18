@@ -67,13 +67,13 @@
 
 ## 06 — Modules & Tooling
 
-- [ ] Named و default exports
-- [ ] `import` و `export type`
-- [ ] Module organization
-- [ ] `tsconfig.json` و strict mode
-- [ ] `tsc` و `tsx` / Node.js
-- [ ] ESM و CommonJS
-- [ ] Ambient types و declaration files
+- [x] Named و default exports
+- [x] `import` و `export type`
+- [x] Module organization
+- [x] `tsconfig.json` و strict mode
+- [x] `tsc` و `tsx` / Node.js
+- [x] ESM و CommonJS
+- [x] Ambient types و declaration files
 
 ---
 
